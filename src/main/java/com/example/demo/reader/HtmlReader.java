@@ -1,4 +1,4 @@
-package com.example.demo.parser;
+package com.example.demo.reader;
 
 import com.example.demo.entity.Rating;
 import org.jsoup.nodes.Document;

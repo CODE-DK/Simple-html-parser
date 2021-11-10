@@ -15,15 +15,15 @@ public class Rating {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id = 0L;
     @Column(updatable = true)
-    private Double rating;
+    private LocalDate date = LocalDate.now();
     @Column(name = "original_name", updatable = false)
     private String originalName;
-    @Column(name = "year", updatable = false)
-    private Integer year;
+    @Column(updatable = true)
+    private Double rating;
     @Column(name = "voting_number", updatable = true)
     private Long votingNumber;
-    @Column(updatable = true)
-    private LocalDate date = LocalDate.now();
+    @Column(name = "year", updatable = false)
+    private Integer year;
 
     public Rating(Double rating, String originalName, Integer year, Long votingNumber) {
         this.rating = rating;

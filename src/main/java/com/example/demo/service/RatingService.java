@@ -18,4 +18,9 @@ public class RatingService {
     public void saveAll(List<Rating> ratings) {
         ratingRepo.saveAll(ratings);
     }
+
+    @Transactional
+    public List<Rating> findAll() {
+        return ratingRepo.findAll();
+    }
 }
